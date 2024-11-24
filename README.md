@@ -2,15 +2,15 @@
 
 ## Seções (sections)
 
-### .data
+### .section .data
 
 Usado para definir variáveis e inicializá-las com valores.
 
-### .bss
+### .section .bss
 
 Usado para reservar espaço para variáveis sem inicializá-las.
 
-### .text
+### .section .text
 
 Seção que contém o código do programa. As instruções
 
@@ -21,7 +21,7 @@ Diretiva usada para declarar símbolos (geralmente funções ou variáveis) que 
 Ex:
 
 ```asm
-global _start ; torna a função _start global
+globl _start # torna a função _start global
 ```
 
 ## Registradores x86 (32 Bits)
@@ -87,7 +87,7 @@ global _start ; torna a função _start global
 | rip         | Instruction Pointer | Aponta para a próxima instrução a ser executada.                                                           |
 | rflags      | Flags Register      | Contém informações sobre o estado do processador, como flags de zero, carry, sign, overflow, entre outras. |
 
-## SYSCALLS
+## SYSCALLS Linux (Kernel 2.2)
 
 Em sistemas Linux, as interações com o sistema operacional (como exibir algo na tela ou sair do programa) são feitas usando "syscalls" (chamadas de sistema). As chamadas de sistema em Linux são feitas com a interrupção int 0x80.
 
